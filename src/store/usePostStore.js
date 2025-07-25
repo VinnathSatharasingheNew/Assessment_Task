@@ -5,27 +5,10 @@ const usePostStore = create(
   persist(
     (set, get) => ({
       comments: [],
-      // likes: new Set(),
       addComment: (name, text) => {
         const newComment = { name, text, timestamp: Date.now() };
         set({ comments: [newComment, ...get().comments] });
       },
-
-      // likePost: (name) => {
-      //   const likes = new Set(get().likes);
-      //   likes.add(name);
-      //   set({ likes });
-      // },
-
-      // hasLiked: (name) => {
-      //   const likes = new Set(get().likes);
-      //   return likes.has(name);
-      // },
-
-      // getLikesCount: () => {
-      //   const likes = new Set(get().likes);
-      //   return likes.size;
-      // },
 
       clearStorage: () => {
         localStorage.removeItem("post-store");

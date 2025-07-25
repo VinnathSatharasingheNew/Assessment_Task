@@ -4,7 +4,7 @@ import "./App.css";
 import Post from "./components/Post";
 import CommentForm from "./components/CommentForm";
 import CommentList from "./components/CommentList";
-import AdminView from "./components/AdminView";
+import AdminView from "./components/MainView";
 
 function App() {
 
